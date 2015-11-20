@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <title>Google Phone Gallery</title>
+  <link rel="stylesheet" href="../css/swing.css">
+  <script src="../bower_components/hammerjs/hammer.js"></script>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-swing/dist/angular-swing.js"></script>
+  <script src="../scripts/swing.js"></script>
+</head>
+<body ng-app="card-stack-demo">
+    <div id="viewport" ng-controller="card-stack-playground as card">
+        <ul class="stack" swing-stack swing-options="options">
+            <li
+                swing-card
+                swing-on-throwout="throwout(eventName, eventObject)"
+                swing-on-throwoutleft="throwoutleft(eventName, eventObject)"
+                swing-on-throwoutright="throwoutright(eventName, eventObject)"
+                swing-on-throwin="throwin(eventName, eventObject)"
+                swing-on-dragstart="dragstart(eventName, eventObject)"
+                swing-on-dragmove="dragmove(eventName, eventObject)"
+                swing-on-dragend="dragend(eventName, eventObject)"
+                ng-repeat="card in cards" ng-class="card.name">        
+                <div class="card dislike">
+                  <div class="image-holder">
+                    <img class="guy" src="http://www.dazzlingwallpapers.com/wp-content/uploads/2014/11/nice_cute_boys_profile_photos_for_facebook_profile__tag_share_4_e59474e51.jpg" alt="">
+                    <p class="stamp">nope</p>
+                  </div>
+                  <div class="details-holder">
+                    <p class="name">Random Guy, <span>25</span></p>
+                    <p class="meta">Went to Crap School, India</p>
+                  </div>
+                </div>
+              </li>
+        </ul>
+    </div>
+</body>
+</html>

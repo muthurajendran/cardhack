@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" ng-app="tinder">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <title>Tinder challenge</title>
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../css/app.css">
+  <script src="../bower_components/hammerjs/hammer.js"></script>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/AngularHammer/angular.hammer.js"></script>
+  <script src="../scripts/core.js"></script>
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+
+</head>
+<body>
+  <div ng-controller="hmCtrl" hm-dir="hm-dir">
+    <div  ng-repeat="card in cards" rep-dir="onRepeatFinish" class="target relpos" hm-pan="onHammer"  hm-panend="onPanEnd"  style="background-image: url({{card.url}}); background-position:center; background-repeat: no-repeat;">
+    </div>
+  </div>
+</body>
+</html>
